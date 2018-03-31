@@ -54,7 +54,7 @@ def get_schedule():
 def run_schedule(keys, schedule):
     logger('Run schedule','Starting function')
     if check_days() == 1:
-        logger('Run schedule','Not raining today')
+        logger('Run schedule','Scheduled to run today')
         start_time = schedule[2]['start_time']
         now = dt.datetime.now()
         today = dt.date.today().strftime('%Y%m%d')
