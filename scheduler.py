@@ -44,7 +44,7 @@ def get_schedule():
     sql = "select id, start_time, duration from sprinklers.schedule"
     rows = con.execute(sql)
     schedule = {}
-    pins = {1: 17, 2: 27, 3: 22, 4: 18}
+    pins = {1: 17, 2: 27}
     for row in rows:
         schedule[row[0]] = {'start_time': row[1], 'duration': row[2], 'pin': pins[row[0]]}
     con.close()
